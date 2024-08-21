@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wyaseen <wyaseen@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 20:42:16 by wyaseen           #+#    #+#             */
-/*   Updated: 2024/08/21 15:02:08 by wyaseen          ###   ########.fr       */
+/*   Created: 2024/08/21 15:08:46 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/08/21 15:08:47 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

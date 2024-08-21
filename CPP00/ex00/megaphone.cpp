@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmohamm <shmohamm@student.42abudhabi.ae>    +#+  +:+       +#+        */
+/*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 12:11:47 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/20 12:44:09 by shmohamm          ###   ########.fr       */
+/*   Created: 2024/08/21 15:08:39 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/08/21 15:08:40 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
