@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:03:56 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/26 16:16:24 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/27 11:41:36 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,40 @@
 int main()
 {
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanA wahab("Wahab", club);
-        wahab.attack();
-        club.setType("some other type of club");
-        wahab.attack();
+        Weapon sword = Weapon("sharp longsword");
+        HumanA alice("Alice", sword);
+        alice.attack();
+        sword.setType("flaming sword");
+        alice.attack();
     }
     {
-        Weapon club = Weapon("crude spiked club");
-        HumanB amal("Amal");
-        amal.setWeapon(club);
-        amal.attack();
-        club.setType("some other type of club");
-        amal.attack();
+        Weapon axe = Weapon("battle axe");
+        HumanB eve("Eve");
+        eve.attack();
+        eve.setWeapon(axe);
+        eve.attack();
+        axe.setType("double-edged axe");
+        eve.attack();
     }
     return 0;
 }
+
+// int main()
+// {
+//     {
+//         Weapon club = Weapon("crude spiked club");
+//         HumanA bob("Bob", club);
+//         bob.attack();
+//         club.setType("some other type of club");
+//         bob.attack();
+//     }
+//     {
+//         Weapon club = Weapon("crude spiked club");
+//         HumanB jim("Jim");
+//         jim.setWeapon(club);
+//         jim.attack();
+//         club.setType("some other type of club");
+//         jim.attack();
+//     }
+//     return 0;
+// }

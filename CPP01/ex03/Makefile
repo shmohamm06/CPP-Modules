@@ -1,7 +1,7 @@
-NAME = Sed
+NAME = Weapon
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
-SRCS = main.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 all: $(NAME)
 

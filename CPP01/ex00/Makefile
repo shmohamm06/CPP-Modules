@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = Zombie
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 SRCS = main.cpp Zombie.cpp randomChump.cpp newZombie.cpp

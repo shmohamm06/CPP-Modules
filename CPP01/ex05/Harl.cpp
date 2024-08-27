@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:54:43 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/26 16:55:18 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/27 11:26:46 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void    Harl::debug()
 {
-    std::cout << "Expressing love for extra bacon in 7XL-double-cheese-triple-pickle-special- ketchup burger." << std::endl;
+    std::cout << "Expressing how much they love adding extra bacon to their massive 7XL burger with double cheese, triple pickles, and special ketchup." << std::endl;
 }
 
 void    Harl::info()
 {
-    std::cout << "Disbelief about extra bacon cost, not enough bacon in burger" << std::endl;
+    std::cout << "Shocked by the cost of extra bacon, and upset that there’s not enough bacon in the burger." << std::endl;
 }
 
 void    Harl::warning()
 {    
-    std::cout << "Request for free extra bacon, as a long-time customer" << std::endl;
+    std::cout << "Asking for free extra bacon, emphasizing loyalty as a long-time customer." << std::endl;
 }
 
 void    Harl::error()
 {
-    std::cout << "Unacceptable, request to speak with manager immediately" << std::endl;
+    std::cout << "Finding the situation unacceptable and demanding to speak with the manager right away." << std::endl;
 }
 
 void    Harl::complain(std::string level)
