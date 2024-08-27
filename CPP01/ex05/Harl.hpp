@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:55:03 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/27 11:09:10 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/27 13:52:15 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class Harl
 {
     private:
-        void debug();
-        void info();
-        void warning();
-        void error();
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
     public:
         void complain( std::string level );
 };

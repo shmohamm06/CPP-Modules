@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:54:43 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/27 11:26:46 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/27 13:52:53 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void    Harl::debug()
 
 void    Harl::info()
 {
-    std::cout << "Shocked by the cost of extra bacon, and upset that there’s not enough bacon in the burger." << std::endl;
+    std::cout << "Shocked by the cost of extra bacon, and upset that there's not enough bacon in the burger." << std::endl;
 }
 
 void    Harl::warning()

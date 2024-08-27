@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:27:08 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/26 16:42:55 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/27 14:00:08 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int  Sed::replace(std::string filename,std::string s1, std::string s2)
 	}
 	else
 	{
-		std::cout << "Error! String is empty." << std::endl;
+		std::cout << "Error! Strings are invalid." << std::endl;
 		Infile.close();
 		Outfile.close();
 		return (1);
