@@ -6,13 +6,14 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/30 10:10:35 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/30 11:36:26 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/08/31 12:09:18 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed(void) : _fpvalue(0) { }
+
 Fixed::Fixed(const int a)
 { 
     this->_fpvalue = a << Fixed::_nbfb;
