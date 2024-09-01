@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 13:57:59 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/01 13:58:00 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/01 11:10:00 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/01 11:10:01 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FragTrap_HPP
-#define FragTrap_HPP
-#include "ClapTrap.hpp"
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
+#include "Animal.hpp"
 #include <iostream>
 
-class FragTrap : public ClapTrap {
-	public:
-		FragTrap(void);
-		FragTrap(std::string const name);
-		FragTrap(FragTrap const &src);
-		~FragTrap(void);
-		FragTrap &operator=(FragTrap const &src);
-		void	highFivesGuys();
-	private:
-
+class WrongAnimal : public Animal {
+public:
+	WrongAnimal(void);
+	WrongAnimal(WrongAnimal const &other);
+	~WrongAnimal(void);
+	WrongAnimal &operator=(WrongAnimal const &other);
+	void makeSound() const;
 };
+
+
 
 #endif

@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/01 13:57:59 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/01 13:58:00 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/01 11:09:54 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/01 11:09:55 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FragTrap_HPP
-#define FragTrap_HPP
-#include "ClapTrap.hpp"
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
-class FragTrap : public ClapTrap {
-	public:
-		FragTrap(void);
-		FragTrap(std::string const name);
-		FragTrap(FragTrap const &src);
-		~FragTrap(void);
-		FragTrap &operator=(FragTrap const &src);
-		void	highFivesGuys();
-	private:
-
-};
-
-#endif
+int main() {
+		const Animal* meta = new Animal();
+		const Animal* j = new Dog();
+		const Animal* i = new Cat();
+		std::cout << j->getType() << " " << std::endl;
+		std::cout << i->getType() << " " << std::endl;
+		i->makeSound();
+		j->makeSound();
+		meta->makeSound();
+		delete meta;
+		delete j;
+		delete i;
+		return 0;
+}

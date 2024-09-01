@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/01 13:58:15 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/01 13:58:16 by shmohamm         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap() {
@@ -16,8 +28,6 @@ ScavTrap::ScavTrap(std::string const name) {
 	std::cout << "ScavTrap: Parametrized constructor called" << std::endl;
 }
 
-
-
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
 	*this = other;
 	std::cout << "ScavTrap: Copy constructor called" << std::endl;
@@ -26,7 +36,6 @@ ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other) {
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap: Destructor called" << std::endl;
 }
-
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
 	std::cout << "ScavTrap: Copy assignment operator called" << std::endl;
