@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/01 13:59:43 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/01 13:59:48 by shmohamm         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : _name(""), _hitPoints(10), _energyPoints(10), _attackDamage(0){
@@ -25,7 +37,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 	}
 	return *this;
 }
-
 
 void ClapTrap::attack(const std::string &target) {
 	if (this->_hitPoints <= 0 || this->_energyPoints <= 0) {
