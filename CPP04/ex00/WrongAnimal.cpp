@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 11:09:59 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/01 11:10:00 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/02 09:27:27 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other) {
 	}
 	return *this;
 }
-

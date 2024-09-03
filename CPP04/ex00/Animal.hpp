@@ -6,13 +6,12 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 11:09:23 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/01 11:09:24 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/02 12:43:41 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
-
 #include <iostream>
 
 class Animal {

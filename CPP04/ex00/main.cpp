@@ -6,12 +6,13 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 11:09:54 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/01 11:09:55 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/03 13:06:59 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include <iostream>
