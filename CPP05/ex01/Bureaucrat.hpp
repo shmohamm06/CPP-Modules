@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/10 11:00:21 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/10 12:45:35 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/10 12:48:42 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/10 12:48:43 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 #include <iostream>
 #include <string>
-#include <stdlib.h>
+#include "Form.hpp"
 
 #define low 150
 #define high 1
+
+class Form;
 
 class Bureaucrat{
     public:
@@ -33,6 +35,7 @@ class Bureaucrat{
 
         void increment();
         void decrement();
+        void signForm(Form& form);
 
         class GradeTooHighException : public std::exception {
             public:
@@ -51,3 +54,4 @@ class Bureaucrat{
 std::ostream& operator<<(std::ostream & os, Bureaucrat const & other);
 
 #endif
+

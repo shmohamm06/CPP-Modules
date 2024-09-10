@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/10 11:00:31 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/10 11:12:59 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/10 12:44:54 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/10 12:45:16 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,14 @@ Bureaucrat::~Bureaucrat() {
 }
 
 std::ostream & operator<<(std::ostream & os, Bureaucrat const & other){
-    os << other.getName() << ", bureaucrat grade  " << other.getGrade() << std::endl;
+    os << other.getName() << " " << other.getGrade() << std::endl;
     return os;
 }
 
 std::string Bureaucrat::getName() const{
     return this->_name;
 }
+
 
 int Bureaucrat::getGrade() const{
     return this->_grade;
@@ -65,6 +66,7 @@ void Bureaucrat::increment(){
     if(this->_grade < high)
         throw Bureaucrat::GradeTooHighException();
 }
+
 
 void Bureaucrat::decrement(){
 
@@ -81,4 +83,8 @@ const char * Bureaucrat::GradeTooHighException::what() const throw()
 const char * Bureaucrat::GradeTooLowException::what() const throw() 
 {
     return "TooLowException";
+}
+
+void Bureaucrat::signForm(Form& form) {
+	form.beSigned(*this);
 }

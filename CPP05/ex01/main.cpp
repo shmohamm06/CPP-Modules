@@ -5,28 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/10 11:00:13 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/10 11:14:33 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/10 12:48:22 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/10 12:48:23 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include <iostream>
+
+
 
 int main()
 {
-	try {
+	try{
 		std::cout << "" << std::endl;
-    	Bureaucrat *ab = new Bureaucrat("Shah", 2);
+		Bureaucrat* ab = new Bureaucrat("b1", 150);
 		std::cout << "" << std::endl;
-		std::cout << *ab << std::endl;
-		ab->increment();
-		std::cout << *ab << std::endl;
-		ab->increment();
-		std::cout << *ab << std::endl;
-		ab->increment();
-		std::cout << *ab << std::endl;
+		Bureaucrat* ac = new Bureaucrat("b2", 20);
+		std::cout << "" << std::endl;
+		Form* cd = new Form("f1", 30, 10);
+
+		std::cout <<  std::endl << *cd << std::endl;
+		try {
+			ab->signForm(*cd);
+			std::cout << "" << std::endl;
+		} catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+		}
+		std::cout << std::endl << *cd << std::endl;
+		try {
+			cd->beSigned(*ac);
+			std::cout << "" << std::endl;
+		} catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+		}
 		delete ab;
-	} catch (std::exception& a) {
-		std::cout << a.what() << std::endl;
+		delete cd;
+		delete ac;
 	}
+	catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+	}
+	return 0;
 }
