@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:57:02 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/11 11:02:23 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 12:19:03 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 
 	out.open((this->getTarget() + "_shrubbery").c_str(), std::ofstream::in | std::ofstream::trunc);
 	out << "      /\\      " << std::endl;
-	out << "     /\\*\\    " << std::endl;
-	out << "    /\\O\\*\\    " << std::endl;
-	out << "   /*/\\/\\/\\   " << std::endl;
-	out << "  /\\O\\/\\*\\/\\  " << std::endl;
-	out << " /\\*\\/\\*\\/\\/\\ " << std::endl;
-	out << "/\\O\\/\\/*/\\/O/\\" << std::endl;
+	out << "     /  \\    " << std::endl;
+	out << "    /    \\    " << std::endl;
+	out << "   /      \\   " << std::endl;
+	out << "  /        \\  " << std::endl;
+	out << " /          \\ " << std::endl;
+	out << "/            \\" << std::endl;
 	out << "      ||      " << std::endl;
 	out << "      ||      " << std::endl;
 	out << "      ||      " << std::endl;

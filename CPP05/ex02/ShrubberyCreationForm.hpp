@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:57:09 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/11 11:02:27 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:58:26 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP_
 
 # include "AForm.hpp"
+# include <fstream>
 # include <string>
 
 class ShrubberyCreationForm : public AForm {

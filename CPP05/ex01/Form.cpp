@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:48:29 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/11 14:36:01 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:55:42 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void Form::beSigned(const Bureaucrat &bureaucrat)
 	}
 	else
 	{
-		std::cout << bureaucrat.getName() << " couldn’t sign  " << this->_name << " because ";
+		std::cout << bureaucrat.getName() << " couldn't sign " << this->_name << " because ";
 		throw Form::GradeTooLowException();
 
 	}

@@ -6,14 +6,12 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:57:43 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/11 11:02:15 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:59:54 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include "AForm.hpp"
-
-
 
 RobotomyRequestForm::RobotomyRequestForm()
 		: AForm("robotomy request", "none", 72, 45) {}
@@ -50,7 +48,7 @@ void RobotomyRequestForm::execute(const Bureaucrat &executor) const {
 	}
 	else
 	{
-	std::srand(std::time(NULL)); // use current time as seed for random generator
+	std::srand(std::time(NULL));
 
 	std::cout << "* some drilling noises *" << std::endl;
 	if (std::rand() % 2 == 0) {

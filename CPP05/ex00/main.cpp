@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 11:00:13 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/10 11:14:33 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:46:59 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int main()
 {
 	try {
-		std::cout << "" << std::endl;
+		std::cout << std::endl;
     	Bureaucrat *ab = new Bureaucrat("Shah", 2);
-		std::cout << "" << std::endl;
+		std::cout << std::endl;
 		std::cout << *ab << std::endl;
 		ab->increment();
 		std::cout << *ab << std::endl;

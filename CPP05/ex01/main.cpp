@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 12:48:22 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/11 10:49:56 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/19 11:57:41 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,27 @@ int main()
 {
 	try{
 		std::cout << std::endl;
-		Bureaucrat* ab = new Bureaucrat("b1", 150);
-		std::cout << std::endl;
-		Bureaucrat* ac = new Bureaucrat("b2", 20);
-		std::cout << std::endl;
-		Form* cd = new Form("f1", 30, 10);
+		Bureaucrat* b1 = new Bureaucrat("b1", 150);
+		Bureaucrat* b2 = new Bureaucrat("b2", 20);
+		Form* f1 = new Form("f1", 30, 10);
 
-		std::cout <<  std::endl << *cd << std::endl;
+		std::cout <<  std::endl << *f1 << std::endl;
 		try {
-			ab->signForm(*cd);
+			b1->signForm(*f1);
 			std::cout << std::endl;
 		} catch (std::exception& e) {
 			std::cout << e.what() << std::endl;
 		}
-		std::cout << std::endl << *cd << std::endl;
+		std::cout << std::endl << *f1 << std::endl;
 		try {
-			cd->beSigned(*ac);
+			f1->beSigned(*b2);
 			std::cout << std::endl;
 		} catch (std::exception& e) {
 			std::cout << e.what() << std::endl;
 		}
-		delete ab;
-		delete cd;
-		delete ac;
+		delete b1;
+		delete f1;
+		delete b2;
 	}
 	catch (std::exception& e) {
 			std::cout << e.what() << std::endl;
