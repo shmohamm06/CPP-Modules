@@ -6,37 +6,44 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 11:23:37 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 11:36:46 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/21 10:29:26 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 
-uintptr_t serialize(Data *ptr) 
+#include "Data.hpp"
+
+uintptr_t Serializer::serialize(Data* ptr)
 {
-	return reinterpret_cast<uintptr_t>(ptr);
+    return reinterpret_cast<uintptr_t>(ptr);
 }
 
-Data* deserialize(uintptr_t raw) 
+Data* Serializer::deserialize(uintptr_t raw)
 {
-	return reinterpret_cast<Data*>(raw);
+    return reinterpret_cast<Data*>(raw);
 }
 
-int main() 
+int main()
 {
-	Data* data;
-	uintptr_t rawData;
-	Data* retData;
+    Data data;
+    data.n = 42;
 
-	data = new Data;
+    uintptr_t raw = Serializer::serialize(&data);
 
-	std::cout << "Data              : " << data << std::endl;
-	rawData = serialize(data);
-	std::cout << "Raw data          : " << rawData << std::endl;
-	retData = deserialize(rawData);
-	std::cout << "Deserialized data : " << retData << std::endl;
+    Data* deserializedData = Serializer::deserialize(raw);
 
-	delete data;
-
-	return 0;
+	std::cout << std::endl;
+    std::cout << "Original Data address: " << &data << std::endl;
+	std::cout << std::endl;
+    std::cout << "Serialized value: " << raw << std::endl;
+	std::cout << std::endl;
+    std::cout << "Deserialized Data address: " << deserializedData << std::endl;
+	std::cout << std::endl;
+    if (deserializedData == &data)
+        std::cout << "Deserialization successful: the addresses match!" << std::endl;
+    else
+        std::cout << "Deserialization failed: the addresses do not match!" << std::endl;
+    std::cout << "Deserialized Data value: " << deserializedData->n << std::endl;
+    return 0;
 }

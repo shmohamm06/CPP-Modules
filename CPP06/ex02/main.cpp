@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 15:49:36 by prossi            #+#    #+#             */
-/*   Updated: 2024/09/18 11:40:41 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/21 10:44:42 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void identify(Base& p)
 int main() 
 {
 	Base *base;
-
+	
 	base = generate();
 	identify(base);
 	identify(*base);

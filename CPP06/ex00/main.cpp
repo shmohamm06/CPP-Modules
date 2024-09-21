@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:33:51 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/17 12:49:56 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/21 10:17:09 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int main(int argc, char **argv) 
 {
-	if (argc == 1) 
+	if (argc == 1 || argc > 2) 
 	{
-		std::cout << "Error: Invalid parameters\n" << "Usage: <program> <literal>" << std::endl;
+		std::cout << "Error: Program accepts only 2 args\n" << "Usage: <program> <literal>" << std::endl;
 		return 1;
 	}
 
-	Scalar::convert(argv[1]);
+	ScalarConverter::convert(argv[1]);
 	return 0;
 }

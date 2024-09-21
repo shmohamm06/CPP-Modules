@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   data.hpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 11:23:29 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 11:23:30 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/21 10:26:09 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DATA_HPP_
 # define DATA_HPP_
 
-# include <cstdint>
+# include <cstdint> 
 # include <iostream>
-# include <stdint.h>
 
 struct Data 
 {
-	int n;
+    int n;
 };
 
-uintptr_t serialize(Data *ptr);
+class Serializer 
+{
+    public:
+        static uintptr_t serialize(Data* ptr);
+        static Data* deserialize(uintptr_t raw);
 
-Data* deserialize(uintptr_t raw);
+    private:
+        Serializer();
+        Serializer(const Serializer& other);
+        Serializer& operator=(const Serializer& other);
+        ~Serializer();
+};
 
-#endif
+#endif 
