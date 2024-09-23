@@ -6,14 +6,13 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:21:18 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 14:23:52 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/23 11:26:52 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-#include <stdexcept>
 #include <iostream>
 
 template <typename T>

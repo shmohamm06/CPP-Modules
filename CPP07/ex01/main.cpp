@@ -6,36 +6,21 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:08:30 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 12:13:38 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:21:36 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "Iter.hpp"
 
 void times_two(int const &n) 
 {
     std::cout << n * 2 << std::endl;
 }
 
-void print(std::string const &s) 
-{
-    std::cout << s << std::endl;
-}
-
 int main() 
 {
-    int size;
-    std::cout << "Enter the size of the array: ";
-    std::cin >> size;
-
-    int* array = new int[size];
-    for (int i = 0; i < size; ++i) 
-    {
-        std::cout << "Enter element " << i+1 << ": ";
-        std::cin >> array[i];
-    }
-
-    ::iter(array, size, times_two);
-    delete[] array;
+    const int size = 5;
+    int array[size] = {1, 2, 3, 4, 5};    
+    iter(array, size, times_two);
     return 0;
 }

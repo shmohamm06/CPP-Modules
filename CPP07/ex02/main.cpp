@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:21:15 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 14:37:21 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:24:10 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 int main()
 {
-    Array<int> a(5);
+    Array<int> a(3);
 
     a[0] = 10;
     a[1] = 15;
     a[2] = 20;
-    a[3] = 25;
-    a[4] = 30;
     
     std::cout << std::endl;
     for (size_t i = 0; i < a.size(); i++)
@@ -36,8 +34,8 @@ int main()
     std::cout << "b[0] = " << b[0] << std::endl;
 
     try {
-        std::cout << "\nAttempting to access a[10]:" << std::endl;
-        std::cout << a[10] << std::endl;
+        std::cout << "\nAttempting to access a[6]:" << std::endl;
+        std::cout << a[6] << std::endl;
     }
     catch (std::exception& e) {
         std::cerr << "Caught an exception: " << e.what() << std::endl;

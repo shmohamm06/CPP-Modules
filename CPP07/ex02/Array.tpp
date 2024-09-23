@@ -6,12 +6,12 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:21:14 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/18 14:36:36 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:27:53 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 template <typename T>
-Array<T>::Array() : _data(nullptr), _size(0) {
+Array<T>::Array() : _data(NULL), _size(0) {
     std::cout << "Default constructor called\n";
 }
 
