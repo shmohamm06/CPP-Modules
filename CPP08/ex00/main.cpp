@@ -5,29 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 12:01:05 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/24 14:30:16 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/09/24 11:11:40 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/09/24 11:15:55 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Whatever.hpp"
+#include "EasyFind.hpp"
 
-int main(void) 
+int main() 
 {
-	int a = 2;
-	int b = 3;
+    std::vector<int> numbers;
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+    numbers.push_back(40);
+    numbers.push_back(50);
 
-	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	std::string c = "chaine1";
-	std::string d = "chaine2";
+    try 
+    {
 
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-	
-	return 0;
+        int result = easyfind(numbers, 30);
+        std::cout << "Found: " << result << std::endl;
+        
+        result = easyfind(numbers, 100);
+        std::cout << "Found: " << result << std::endl;
+    } 
+    catch (const std::exception &e) 
+    {
+        std::cout << e.what() << std::endl;
+    }
+    return 0;
 }
