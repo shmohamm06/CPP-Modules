@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 16:03:56 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/08/27 14:00:51 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:59:09 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main()
 {
     {
-        Weapon sword = Weapon("sharp longsword");
+        Weapon sword = Weapon(NULL);
         HumanA alice("Alice", sword);
         alice.attack();
         sword.setType("flaming sword");

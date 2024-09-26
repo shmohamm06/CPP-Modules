@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SPan.cpp                                           :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:27:41 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/24 11:45:44 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/25 12:45:37 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span() 
-{
-    std::cout << "Default constructor called" << std::endl;
-}
+Span::Span() {}
 
-Span::Span(unsigned int n) : _size(n) 
-{
-    std::cout << "Parameterized constructor called" << std::endl;
-}
+Span::Span(unsigned int n) : _size(n) {}
 
 Span::Span(const Span& other) : _vector(other._vector), _size(other._size) 
 {
-    std::cout << "Copy constructor called" << std::endl;
     *this = other;
 }
 
-Span::~Span() 
-{
-    std::cout << "Destructor called" << std::endl;
-}
+Span::~Span() {}
 
 Span& Span::operator=(const Span& other) 
 {
-    std::cout << "Assignment operator called" << std::endl;
     if (this == &other) return *this;
 
     this->_size = other._size;
@@ -46,44 +35,44 @@ Span& Span::operator=(const Span& other)
 
 void Span::addNumber(int n) 
 {
-	if (this->_vector.size() == this->_size) 
-	{
+	if (this->_vector.size() == this->_size)
 		throw Span::SpanIsFullException();
-	}
 	this->_vector.push_back(n);
 }
 
-void Span::addRange(IT begin, IT end) 
+void Span::addNumber(IT begin, IT end) 
 {
-	if (this->_vector.size() + std::distance(begin, end) > this->_size) 
-	{
+	if (this->_vector.size() + std::distance(begin, end) > this->_size)
 		throw Span::SpanIsFullException();
-	}
 	this->_vector.insert(this->_vector.end(), begin, end);
 }
 
 unsigned int Span::shortestSpan() const 
 {
-	if (this->_size < 2 || this->_vector.size() < 2) throw Span::SizeTooSmallException();
+	if (this->_size < 2 || this->_vector.size() < 2) 
+		throw Span::SizeTooSmallException();
 
 	std::vector<int> copy(this->_vector);
 	std::sort(copy.begin(), copy.end());
 	int ret = *(copy.begin() + 1) - *copy.begin();
-	for (IT it = copy.begin(); it != copy.end() - 1; ++it) 
+	for (IT i = copy.begin(); i != copy.end() - 1; ++i) 
 	{
-		if(*(it + 1) - *it < ret) 
-		{
-			ret = *(it + 1) - *it;
-		}
+		if (*(i + 1) - *i < ret) 
+			ret = *(i + 1) - *i;
 	}
+	std::cout << "Shortest span: ";
 	return ret;
 }
 
 unsigned int Span::longestSpan() const 
 {
-	if (this->_size < 2 || this->_vector.size() < 2) throw Span::SizeTooSmallException();
-	return *std::max_element(this->_vector.begin(), this->_vector.end())
+	if (this->_size < 2 || this->_vector.size() < 2) 
+		throw Span::SizeTooSmallException();
+
+	int longest = *std::max_element(this->_vector.begin(), this->_vector.end())
 		- *std::min_element(this->_vector.begin(), this->_vector.end());
+	std::cout << "Longest span: ";
+	return longest;
 }
 
 std::size_t Span::size() const 
@@ -93,10 +82,10 @@ std::size_t Span::size() const
 
 const char* Span::SpanIsFullException::what() const throw() 
 {
-	return "Can't add another number, span is full";
+	return "Span is full, unable to add another number";
 }
 
 const char* Span::SizeTooSmallException::what() const throw() 
 {
-	return "Size of span is less or equal to 1, no span to find";
+	return "No span to find, size of span is either 1 or less than 1";
 }

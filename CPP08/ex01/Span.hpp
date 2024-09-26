@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:24:34 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/24 11:28:02 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/25 12:45:37 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Span
 		Span& operator=(const Span& other);
 
 		void addNumber(int n);
-		void addRange(IT begin, IT end);
+		void addNumber(IT begin, IT end);
 
 		unsigned int shortestSpan() const;
 		unsigned int longestSpan() const;
