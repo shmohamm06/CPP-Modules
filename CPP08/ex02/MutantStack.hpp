@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 12:48:33 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/25 15:40:47 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/09/30 11:15:31 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ class MutantStack : public std::stack<T>
 };
 
 #include "MutantStack.tpp"
-
 
 #endif

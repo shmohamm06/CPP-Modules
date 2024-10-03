@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:24:34 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/09/25 12:45:37 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:14:26 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <iostream>
 # include <exception>
 # include <vector>
-# include <cstddef>
-# include <exception>
-# include <algorithm>
 
 class Span 
 {
@@ -51,14 +48,13 @@ class Span
 	
 	public:
 
-		class SpanIsFullException : public std::exception 
-		{
-			public: virtual const char* what() const throw();
+		class SpanIsFullException : public std::exception {
+			public:
+				virtual const char* what() const throw();
 		};
-
-		class SizeTooSmallException : public std::exception 
-		{
-			public: virtual const char* what() const throw();
+		class SizeTooSmallException : public std::exception {
+			public:
+				virtual const char* what() const throw();
 		};
 };
 
