@@ -5,34 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 11:11:40 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/10/08 14:01:28 by shmohamm         ###   ########.fr       */
+/*   Created: 2024/10/14 12:17:24 by shmohamm          #+#    #+#             */
+/*   Updated: 2024/10/14 12:17:25 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "EasyFind.hpp"
+#include "BitcoinExchange.hpp"
+#include <iostream>
 
-int main() 
+int main(int ac, char **av) 
 {
-    try 
+	if (ac != 2) 
+    {	
+		std::cout << "Invalid input format." << std::endl;
+		return -1;
+	}
+	try 
     {
-        std::list<int> numbers;
-        numbers.push_back(10);
-        numbers.push_back(20);
-        numbers.push_back(30);
-        numbers.push_back(40);
-        numbers.push_back(50);
-
-        int result = easyfind(numbers, 30);
-        std::cout << "Found: " << result << std::endl;
-
-        result = easyfind(numbers, 100);
-        std::cout << "Found: " << result << std::endl;
-    } 
-    catch (const std::exception &e) 
+		BitcoinExchange ex;
+		ex.fillMap("data.csv");
+		ex.readInFile(av[1]);
+	} catch (const std::exception& e) 
     {
-        std::cout << "An exception occurred: " << e.what() << std::endl;
-    }
-
-    return 0;
+		std::cout << e.what() << std::endl;
+	}
 }
