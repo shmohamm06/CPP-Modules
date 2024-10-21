@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:53:16 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/10/15 15:53:17 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/10/16 12:31:01 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	main(int ac, char **av)
 		std::vector<int> numbers_vector = PmergeMe<std::vector<int>,
 		std::vector<std::pair<int, int> > >::readNums(ac, av);
 		std::vector<int> sorted_vector = PmergeMe<std::vector<int>,
-		std::vector<std::pair<int, int> > >::fordJ(numbers_vector);
+			std::vector<std::pair<int, int> > >::fordJ(numbers_vector);
 		vectorEndTime = clock() - vectorStartTime;
 		vectorTimeToSort = vectorEndTime / (double)CLOCKS_PER_SEC * 1000;
 		

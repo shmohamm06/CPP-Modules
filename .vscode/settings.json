@@ -66,6 +66,8 @@
     "stack": "cpp",
     "filesystem": "cpp",
     "*.tpp": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "__tree": "cpp",
+    "map": "cpp"
   }
 }

@@ -6,7 +6,7 @@
 /*   By: shmohamm <shmohamm@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:37:15 by shmohamm          #+#    #+#             */
-/*   Updated: 2024/10/14 13:56:00 by shmohamm         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:41:19 by shmohamm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ RPN::RPN(RPN const &copyTemplate)
 RPN &RPN::operator=(RPN const &initTemplate)
 {
 	if (this != &initTemplate)
-	{
 		this->stack = initTemplate.stack;
-	}
 	return *this;
 }
 
@@ -35,9 +33,7 @@ bool isAllDigits(const std::string &str)
 	for (std::string::const_iterator it = str.begin(); it != str.end(); it++)
 	{
 		if (!std::isdigit(*it))
-		{
 			return false;
-		}
 	}
 	return true;
 }
@@ -50,32 +46,22 @@ bool RPN::isOperator(char c)
 void RPN::calculate(char c)
 {
 	if (this->stack.size() < 2)
-	{
 		throw std::runtime_error("Not Enough Operands for Operation");
-	}
 	int b = this->stack.top();
 	this->stack.pop();
 	int a = this->stack.top();
 	this->stack.pop();
 
 	if (c == '+')
-	{
 		stack.push(a + b);
-	}
 	else if (c == '-')
-	{
 		stack.push(a - b);
-	}
 	else if (c == '*')
-	{
 		stack.push(a * b);
-	}
 	else if (c == '/')
 	{
 		if (b == 0)
-		{
 			throw std::runtime_error("Denominator 0 found.");
-		}
 		stack.push(a / b);
 	}
 	return;
@@ -89,27 +75,19 @@ int RPN::readArg(std::string const &arg)
 	while (iss >> element)
 	{
 		if (element.length() == 1 && isOperator(element[0]))
-		{
 			calculate(element[0]);
-		}
 		else
 		{
 			if (!isAllDigits(element))
-			{
 				throw std::invalid_argument("Non-digit element found: " + element);
-			}
 			int n;
 			std::istringstream(element) >> n;
 			if (n < 0 || n > 9)
-			{
 				throw std::out_of_range("Invalid number: " + element);
-			}
 			stack.push(n);
 		}
 	}
 	if (stack.size() != 1)
-	{
 		throw std::logic_error("Expression received is invalid");
-	}
 	return stack.top();
 }
